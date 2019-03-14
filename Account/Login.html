@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+	
+</head>
+	<script>
+		
+	function Signin()
+	{
+		if(f1.user.value=="fpt")
+			{
+				if(f1.pass.value=="greenwich")
+				{
+					alert('Login success');
+					location="Home.html";
+				}
+		else{alert('Invalid password');
+			f1.pass.focus();}
+			}
+		else{alert('Invalid username');
+			f1.user.focus();}
+	}
+</script>
+<link rel="stylesheet" href="../Content/site.css"/>
+<link rel="stylesheet" href="../Content/main.css"/>
+<body>
+	<img src="../Image/hatsune.jpg" width="100%" height="300"/>
+	<div id="title" align="center">
+	<a href="../Home.html" id="t1">Figurine ABC Shop</a>
+		<input type="search" placeholder="Search" id="s1"/>
+		<input type="button" value="Search"/>
+<div class="dropdown">
+		<label class="dropbtn" id="m1" >Account</label>
+		<div class="content">
+			<a href="../Account/Login.html">Login</a>
+			<a href="../Account/Registers.html">Registration</a>
+		</div>
+		</div>
+	</div>
+	<br/>
+	<div id="menu" align="center" >
+		<a href="../Home.html" >Home</a>
+		<a href="../Product/Miku.html">Hatsune Miku</a>
+		<a href="../Product/Rem.html">Rem</a>
+		<a href="../Product/Asuna.html">Asuna</a>
+	</div>
+	<br/>
+	<div  align="center">
+		<form id="f1">
+		<h2>Login</h2>
+		<table style="background: #4CDE97" border="2">
+			<tr>
+			<th>Username: </th>
+			<td><input type="text" placeholder="Enter username" name="user" /></td>
+			</tr>
+			<tr>
+			<th>Password: </th>
+			<td><input type="password" placeholder="Enter password" name="pass" /></td>
+			</tr>
+		</table>
+			<input type="button" value="Sign in" name="btn" onClick="Signin()"/><br/>
+			<a href="Registers.html">Not have an account? Click here to join us.</a>
+		</form>
+	</div>
+	<br/>
+	<div id="footer">
+	<ul>
+			<h3>Contact</h3>
+		<li>Address: 123 Pham Phu Thu </li>
+		<li>Phone: 0954321678</li>
+		<li>Email: acbshop@gmail.com</li>
+		<li>Business hours: 9 a.m-9 p.m</li>
+	</ul>
+	</div>
+</body>
+</html>

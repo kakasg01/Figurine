@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#myImg:hover {opacity: 0.7;}
+		.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+		}
+		.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 450px;
+}
+		@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+		.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+		@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+</style>
+<title>Asuna Fairy Dance</title>
+<link rel="stylesheet" href="../../Content/site.css"/>
+<link rel="stylesheet" href="../../Content/main.css"/>
+	<link rel="stylesheet" href="../../Content/slide.css"/>
+	<link rel="stylesheet" href="../../Content/bootstrap.min.css"/> 
+</head>
+	<script>
+		function buy(){
+			alert('Successful purchase!')
+		}
+		function send(){
+			alert('Thank you for your feedback!')
+		}
+	</script>
+<body>
+	
+	<div id="title" align="center">
+	<a href="../../Home.html" id="t1">World of Figurine</a>
+		<input type="search" placeholder="Search" id="s1"/>
+		<input type="button" value="Search"/>
+<div class="dropdown">
+		<label class="dropbtn" id="m1" >Account</label>
+		<div class="content">
+			<a href="../../Account/Login.html">Login</a>
+			<a href="../../Account/Registers.html">Registration</a>
+		</div>
+		</div>	</div>
+	
+	<br/>
+	<div id="menu" align="center" >
+		<a href="../../Home.html" >Home</a>
+		<a href="../../Product/Miku.html">Hatsune Miku</a>
+		<a href="../../Product/Rem.html">Rem</a>
+		<a href="../../Product/Asuna.html">Asuna</a>
+	</div>
+	<div id="main">
+	<div id="d1">
+		<img id="myImg" src="../../Image/71ONoy6tI3L._SL1000_.jpg" alt="Side" style="width:100%;max-width:300px">
+		<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <div><img class="modal-content" id="img01"></div>
+  <div id="caption"></div>
+</div>
+		<script>
+			var modal = document.getElementById('myModal');
+			var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+		</script>
+	</div>
+		<div id="d2">
+			<label>SWORD ART ONLINE ASUNA FAIRY DANCE</label><br/>
+			<label>Price: $200</label><br/>
+			<input type="button" value="Buy" class="btn btn-success" onClick="buy()"/><br/>
+			<h4>Description:</h4>
+			<label>Character: Asuna</label><br/>
+			<label>Series: SWORD ART ONLINE -- Alfheim Online</label><br/>
+			<label>Manufacturer: Aquamarine</label><br/>
+			<label>Size: 22cm</label><br/>
+			<label>Feedback: <br/><textarea></textarea></label><br/>
+			<input type="button" value="Send" class="btn btn-success" onClick="send()"/>
+		</div>
+		</div>
+	<div id="footer">
+	<ul>
+
+			<h3>Contact</h3>
+		<li>Address: 123 Pham Phu Thu </li>
+		<li>Phone: 0954321678</li>
+		<li>Email: acbshop@gmail.com</li>
+		<li>Business hours: 9 a.m-9 p.m</li>
+	</ul>
+	</div>
+</body>
+</html>

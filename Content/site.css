@@ -1,0 +1,43 @@
+body{margin: 0}
+#s1{
+	width: 20%;
+	
+}
+#menu {
+	background: #F138D6;
+}
+#menu a {
+	font-size: 25px;
+	color: darkgray;
+	padding: 17px 18px;
+	text-decoration: none;
+}
+#menu a:hover{
+	background: blue;
+	color: blanchedalmond;
+}
+#t1{
+	text-decoration: none;
+	color: fuchsia;
+	float: left;
+	padding-left: 40px;
+	font-size: 30px;
+}
+#m1 {
+	font-size: 30px;
+	text-decoration: none;
+	color: aquamarine;
+}
+#main {
+	height: 550px;
+	margin-top: 50px;
+}
+#footer {
+	height: 100%;
+	margin-top: 0px;
+	background: darkgray;
+	color: cyan;
+}
+#m1{
+	
+}

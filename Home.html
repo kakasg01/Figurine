@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+	<link rel="stylesheet" href="Content/site.css"/>
+<link rel="stylesheet" href="Content/main.css"/>
+	<link rel="stylesheet" href="Content/slide.css"/>
+</head>
+
+<body>
+	
+	<div id="title" align="center">
+	<a href="Home.html" id="t1">World of Figurine</a>
+		<input type="search" placeholder="Search" id="s1"/>
+		<input type="button" value="Search"/>
+		<div class="dropdown">
+		<label class="dropbtn" id="m1" >Account</label>
+		<div class="content">
+			<a href="Account/Login.html">Login</a>
+			<a href="Account/Registers.html">Registration</a>
+		</div>
+		</div>
+	</div>
+	
+	<br/>
+	<div id="menu" align="center" >
+		<a href="Home.html" >Home</a>
+		<a href="Product/Miku.html">Hatsune Miku</a>
+		<a href="Product/Rem.html">Rem</a>
+		<a href="Product/Asuna.html">Asuna</a>
+	</div>
+	<div class="slideshow">
+		<div class="slide">
+			<img src="Image/hatsune.jpg" style="width: 100%" height="500"/>
+			<div class="text">Bring your characters</div><br/>
+			<div class="text1">Close to you</div>
+		</div>
+		<div class="slide">
+			<img src="Image/rem1.jpg" style="width: 100%" height="500"/>
+			<div class="text">Bring your characters</div><br/>
+			<div class="text1">Close to you</div>
+		</div>
+		<div class="slide">
+			<img src="Image/asuna0.jpg" style="width: 100%" height="500"/>
+			<div class="text">Bring your characters</div><br/>
+			<div class="text1">Close to you</div>
+		</div>
+
+		<a class="prev" onClick="plus(-1)">&#10094;</a>			
+		<a class="next" onClick="plus(1)">&#10095;</a>
+	</div>
+	<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+carousel();		
+function plus(n) {
+  showSlides(slideIndex += n);
+}
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slide");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 5000); 
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slide");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+}
+		
+</script>
+	<div id="main" >
+		<h2>Hot Product:</h2>
+		<div id="d1">
+		<img id="myImg" src="Image/3436-pvc-asuna-alfheim-online-ver.jpg" alt="Side" width="200" height="250">
+			<br/>
+			<font color="grey">Asuna Alfheim Online</font> <br/>
+			<b>Unit Price: </b>
+			<font color="darkgray">$200</font><br/>
+			<a href="Detail/Asuna/Detail 2.html" >Detail</a>
+		</div>
+				<div id="p3">
+		<img src="Image/Miku sea.jpg" width="250" height="250"/>
+			<br/>
+			<font color="grey">Hatsune Miku Deep Sea</font><br/>
+			<b>Unit Price: </b>
+			<font color="darkgray">$200</font><br/>
+			<a href="Detail/Miku/Detail 3.html" >Detail</a>
+		</div>
+			<div id="p1">
+		<img src="Image/29eae66f9528f9682497f1ea8c7d7042.jpg" width="200" height="250"/>
+			<br/>
+			<font color="grey">Rem Bunny</font> <br/>
+			<b>Unit Price: </b>
+			<font color="darkgray">$290</font><br/>
+			<a href="Detail/Rem/Detail2.html" >Detail</a>
+		</div>
+				
+	</div>
+	<div id="footer">
+	<ul>
+		<div id="t" align="center"><b>World of Figurine</b></div>
+			<h3>Contact</h3>
+		<li>Address: 123 Pham Phu Thu </li>
+		<li>Phone: 0954321678</li>
+		<li>Email: acbshop@gmail.com</li>
+		<li>Business hours: 9 a.m-9 p.m</li>
+	</ul>
+	</div>
+</body>
+</html>
